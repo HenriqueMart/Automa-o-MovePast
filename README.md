@@ -27,7 +27,7 @@ Se preferir rodar o script no seu ambiente local para realizar testes e personal
 ##### 2.1. Instalar o Python
 Primeiro, você precisa instalar o *Python*. Acesse o site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais recente do Python compatível com o seu sistema operacional.
 
-![Instalação do Python](https://exemplo.com/imagem_instalacao_python.png) 
+![Imagens - Python](https://github.com/user-attachments/assets/bf2755f8-ee88-4d55-ae6a-710bba105324)
 
 ##### 2.2. Instalar uma IDE (Ambiente de Desenvolvimento)
 Embora existam várias opções de IDEs, o *Visual Studio Code (VSCode)* é uma excelente escolha por ser fácil de configurar e altamente popular entre desenvolvedores. Ele também oferece uma integração com vários plugins úteis.
@@ -35,6 +35,17 @@ Embora existam várias opções de IDEs, o *Visual Studio Code (VSCode)* é uma 
 Para configurar o VSCode para Python, siga este tutorial: [Como configurar o VSCode para Python](https://www.datacamp.com/pt/tutorial/setting-up-vscode-python).
 
 Outras opções de IDEs incluem *PyCharm, **Sublime Text*, entre outras.
+
+Com tudo configurado chegou a hora de executar
+
+Defina qual e a pasta aonde estão todos os PDF em suas subpastas
+Defina a pasta aonde estarão indo todos seus PDF
+![Programa](https://github.com/user-attachments/assets/400de0a4-e784-404a-83b1-70c13ea09d35)
+Foi copiado com Sucesso!
+
+Como ficara as pastas após a execução:
+
+![image](https://github.com/user-attachments/assets/47bb5ade-0dd6-435c-8210-f2b8375f7f4a)
 
 ### 3. Uso
 
