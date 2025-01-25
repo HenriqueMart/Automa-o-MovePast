@@ -6,9 +6,10 @@ O *MOVEPAST* é um script desenvolvido para automatizar a transferência de arqu
 
 1. [Tecnologias Utilizadas](#tecnologias-utilizadas)
 2. [Instalação](#instalacao)
-3. [Uso](#uso)
-4. [Contribuindo](#contribuindo)
-5. [Licença](#licenca)
+3. [Versões](#Versões)
+4. [Uso](#uso)
+5. [Contribuindo](#contribuindo)
+6. [Licença](#licenca)
 
 ### 1. Tecnologias Utilizadas
 
@@ -47,14 +48,22 @@ Como ficara as pastas após a execução:
 
 ![image](https://github.com/user-attachments/assets/47bb5ade-0dd6-435c-8210-f2b8375f7f4a)
 
-### 3. Uso
+### 3. Versões
+<ul>
+  <li>(CONCLUÍDO)Realizando a cópia dos arquivos (Regra de Negócio)</li>
+  <li>(ATUAL) -> Realizando o salvamento do caminho do usuário (Configuração salva na máquina) </li>  
+  <li>Reestruturando o código para Programação Orientado ao Objeto</li>
+  <li>Tela para o usuário (Interface)</li>
+</ul>
+
+### 4. Uso
 
 Qualquer pessoa pode utilizar o script MOVEPAST para organizar seus arquivos PDF. Caso deseje distribuir ou divulgar este script, é importante dar os devidos créditos ao desenvolvedor, mencionando a autoria do projeto.
 
-### 4. Contribuindo
+### 5. Contribuindo
 
 Se você deseja contribuir para o desenvolvimento do script, sinta-se à vontade para enviar pull requests ou fornecer feedback. O projeto está sempre aberto a melhorias e novas ideias, e é uma ótima oportunidade para aprendizado e colaboração!
 
-### 5. Licença
+### 6. Licença
 
 Este projeto está licenciado sob a *Licença MIT*.
