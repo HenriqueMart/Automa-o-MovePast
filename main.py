@@ -2,6 +2,12 @@
 import os
 #Permiti copiar arquivos, várias funções de manipulação de arquivos e coleções de arquivos. 
 import shutil
+#Permiti que acesse os diretório e manipular os diretório
+from pathlib import Path
+
+#Atributos
+pastaDeOrigem = "Não Definido"
+pastaDestino = "Não Definido"
 
 def informacao_sistema():
     os.system('cls')
@@ -14,11 +20,37 @@ def informacao_sistema():
     print("Versão: 1.0")
     print("==========================")
 
-informacao_sistema()
+#Pegando a pasta do sistema Operacional
+pastaDoSistema = Path.home() / 'MovePast.txt'
+#Verificação
 
-# Entrada das pastas
-pastaDeOrigem = input("Digite a pasta de Origem: ").strip('\'"')
-pastaDestino = input("Digite a pasta de Destino: ").strip('\'"')
+#Verifica ser o arquivo na pasta principal do sistema no nome do arquivo salvo. Verifica ser essa pasta está criada
+ConfiguracaoCriada = os.path.exists(pastaDoSistema)
+
+#Verifica ser o usuário deseja alterar
+if(ConfiguracaoCriada):
+    resposta = input("Deseja Carregar configuração Salva?\n[1] Sim\n[2] Não\nDigita o número a baixo:")
+
+#Caso existe e o usuário deseja pegar informação ele carrega todas as informações salvas
+if(ConfiguracaoCriada and resposta == '1'):
+    #Pega o arquivo em cada linha tirando espaço linhas aspas e quebra de linha
+    with open(pastaDoSistema, 'r') as arquivos:
+            pastaDeOrigem = arquivos.readline().strip().strip('\'"')
+            pastaDestino = arquivos.readline().strip().strip('\'"')
+else:
+    #Caso ele não tenha salvo, solicita um novo endereço 
+    os.system('cls')
+    informacao_sistema()
+    print("-------------------Configuração-----------")
+    # Entrada das pastas
+    pastaDeOrigem = input("Digite a pasta de Origem: ").strip('\'"')
+    pastaDestino = input("Digite a pasta de Destino: ").strip('\'"')
+
+    if(input("Deseja salvar essa configuração?\n[1] Sim\n[2] Não\nDigita o número a baixo:") == '1'):
+        print("Salvando Configuração...")
+        #Salvo o arquivo no tipo 'w' enviando como string e com quebra de linha
+        with open(pastaDoSistema, 'w') as arquivos:
+            arquivos.write(str(pastaDeOrigem) +  "\n" + str(pastaDestino))
 
 # Verifica se a pasta de origem e a de destino existem
 if not os.path.exists(pastaDeOrigem):
@@ -27,8 +59,7 @@ else:
     print(f"Pasta de origem '{pastaDeOrigem}' encontrada.")
 
 if not os.path.exists(pastaDestino):
-    print(f"A pasta de destino '{pastaDestino}' não existe. Criando...")
-    os.makedirs(pastaDestino, exist_ok=True)
+    print(f"A pasta de destino '{pastaDestino}' não existe.")
 else:
     print(f"Pasta de destino '{pastaDestino}' encontrada.")
 
@@ -62,5 +93,6 @@ def mover_arquivos(pasta_origem, pasta_destino):
                     shutil.copy2(origem, destino)
                     print(f"Arquivo '{arquivo}' copiado para a pasta de destino: '{destino}'")
 
+
 # Chama a função para mover os arquivos
-mover_arquivos(pastaDeOrigem,pastaDestino)
+mover_arquivos(pastaDeOrigem, pastaDestino)
